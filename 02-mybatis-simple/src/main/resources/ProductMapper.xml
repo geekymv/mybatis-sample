@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geekymv.mybatis.ProductMapper">
+
+    <insert id="insertProduct">
+        insert into t_product(product_id, product_name) values(#{productId}, #{productName})
+    </insert>
+
+    <select id="queryProduct" resultType="com.geekymv.mybatis.Product">
+      select product_id,  product_name from t_product where product_id = #{productId}
+    </select>
+
+</mapper>
